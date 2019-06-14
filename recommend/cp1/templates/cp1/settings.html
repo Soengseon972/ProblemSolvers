@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+<title>高级设置</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<style type="text/css">
+    .tangram-suggestion-main {
+        z-index: 999999;
+    }
+</style>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=O0plR0S4y8AsPSkgxkaTEtyMjaLHUOSU"></script>
+<link href="{% static 'cp1/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap-css -->
+
+<link href="{% static 'cp1/css/owl.carousel.css' %}" rel="stylesheet"><!-- Owl-carousel-CSS -->
+
+<link href="{% static 'cp1/css/popup-box.css' %}" rel="stylesheet" type="text/css" media="all" /><!-- pop-up css --> 
+
+<link href="{% static 'cp1/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+<!-- banner css -->
+<link rel="stylesheet" href="{% static 'cp1/css/poposlides.css' %}" type="text/css" media="all" />
+<!-- //banner css -->
+
+<!-- font-awesome-icons -->
+<link rel="stylesheet" href="{% static 'cp1/css/font-awesome.min.css' %}" />
+<!-- //font-awesome-icons -->
+
+<!-- google fonts -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<!-- //google fonts -->
+
+</head>
+	
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+ 
+<!--/main-header-->
+<div class="demo-inner-content" id="home">
+	<div class="main_agileits">
+	<!--/banner-info-->
+	<!-- header -->
+		<div class="header-w3layouts"> 
+			<!-- Navigation -->
+			<nav class="navbar navbar-default navbar-fixed-top"> 
+				<div class="container">
+					<div class="navbar-header page-scroll">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Tourist</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="home.html">智慧出行</a></h1>
+					</div> 
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav navbar-right cl-effect-15">
+							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+							<li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
+							<li><a href="home.html">主页</a></li>
+							<li><a href="about.html">关于我们</a></li>
+							<li><a href="settings.html">高级选项</a></li>
+							<li><a href="#testimonials">测试示例</a></li>
+							<li><a href="update.html">更新计划</a></li>
+							<li><a href="#contact">联系我们</a></li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container -->
+			</nav>  
+		</div>	
+		<!-- //header -->
+	</div>
+</div>
+ <!--/banner-section-->
+
+<!-- travel -->
+<div class="travel">
+	<div class="container">
+		<h4>旅客行程智能推荐系统</h4>
+		<h3>您可以通过调整以下限制条件搜索最适合您的出行方式</h3>
+	</div>
+</div>
+<!-- /travel -->
+
+<!-- settings -->
+
+<div class="container">
+	<div class="settings-grid1">
+    	<h3 class="title">高级选项</h3>
+					<div class="fancy-form">
+						   <form name="myForm" action="results.html" onsubmit="return validateForm()" method="post">
+								<div class="col-md-6 form-date-w3-agileits editContent">
+										<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> 出发地</label>
+										<div id="r-result1"><input type="text" id="suggestId1" placeholder="请选择出发地"/>
+                                        </div>
+										<div class="acdiv" id="searchResultPanel1" style="display: none;">
+                                        </div>			
+                                </div>
+								<div class="col-md-6 form-date-w3-agileits editContent">
+										<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> 目的地</label>
+                                        <div id="r-result2"><input type="text" id="suggestId2" placeholder="请选择目的地"/>
+                                        </div>
+										<div class="acdiv" id="searchResultPanel2" style="display: none;">
+                                        </div>
+								</div>
+								<div class="col-md-6 form-left-agileits-w3layouts editContent">
+										<label class="editContent"><span class="fa fa-time" aria-hidden="true"></span> 最早出发时间</label>
+									<div class="agileits_w3layouts_main_gridl">
+                                        <input type="text" placeholder="请选择时间" id="choose-timeS" name="time1">
+									</div>
+								</div>
+								<div class="col-md-6 form-left-agileits-w3layouts editContent">
+										<label class="editContent"><span class="fa fa-time" aria-hidden="true"></span> 最晚出发时间</label>
+									<div class="agileits_w3layouts_main_gridl">
+										<input type="text" placeholder="请选择时间" id="choose-timeE" name="time2">
+									</div>
+								</div>
+                                <div class="col-md-12 editContent">
+										<label class="editContent"><span class="fa fa-yen" aria-hidden="true"></span> 价格区间（元）</label>
+									<div class="settings-grid2">
+										<input class="range-slider" value="10,2000"/>
+									</div>
+								</div>
+                                <div class="col-md-4 editContent">
+										<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> 最大换乘次数</label>
+										<select class="form-control">
+											<option>0次</option>
+											<option>1次</option>
+											<option>2次</option>
+										</select>
+								</div>
+                                <div class="col-md-4 col-md-offset-2 editContent">
+										<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> 偏好选择</label>
+										<select class="form-control">
+											<option>价格优先</option>
+											<option>时间优先</option>
+											<option>舒适度优先</option>
+										</select>
+								</div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-9 settings-grid3">
+                                	<div class="col-md-3">
+                                	<label class="editContent"><span class="fa fa-train" aria-hidden="true"></span></label>
+ 			 						<label class="radio-inline">
+    								<input type="radio" name="tans_means" id="train_only" value="train">
+    								仅高铁	</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <label class="editContent"><span class="fa fa-plane" aria-hidden="true"></span></label>
+                                    <label class="radio-inline">
+    								<input type="radio" name="tans_means" id="flight_only" value="flight">
+    								仅飞机	</label>
+                                    </div>
+                                    <div class="col-md-5">
+                                    <label class="editContent"><span class="fa fa-random" aria-hidden="true"></span></label>
+                                    <label class="radio-inline">
+    								<input type="radio" name="tans_means" id="train_flight" value="mix", checked>
+    								空铁联乘</label>
+                                    </div>
+								</div>
+                                <div class="col-md-12 settings-grid4 editContent">
+									  <input type="submit" value="搜索" >
+								</div>
+                                <div class="clearfix"></div>
+							</form>
+						</div>
+                    </div>
+               </div>
+<!-- /settings-->
+
+<!-- popular packages -->
+<div class="packages" id="packages">
+	<div class="container">
+		<div class="wthree_head_section">
+			<h3 class="title">Popular Packages</h3>
+		</div>
+		<div class="packages_grids">
+			<div class="packages_grid1">
+				<div class="col-md-3 package1">
+					<img src="images/package1.jpg" alt="package1" />
+					<h4>London Holiday Tour</h4>
+					<h5>900$</h5>
+					<a href="#small-dialog" class="w3_agileits_sign_up2 popup-with-zoom-anim ab scroll">Book Now</a>
+				</div>
+				<div class="col-md-3 package1">
+					<img src="images/package2.jpg" alt="package1" />
+					<h4>Paris Eiffel Tower</h4>
+					<h5>290$</h5>
+					<a href="#small-dialog" class="w3_agileits_sign_up2 popup-with-zoom-anim ab scroll">Book Now</a>
+				</div>
+				<div class="col-md-6 package1">
+					<img src="images/package3.jpg" alt="package1" />
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="packages_grid2">
+				<div class="col-md-6 package1">
+					<img src="images/package6.jpg" alt="package1" />
+				</div>
+				<div class="col-md-3 package1">
+					<img src="images/package4.jpg" alt="package1" />
+					<h4>Thailand Summer Beach</h4>
+					<h5>850$</h5>
+					<a href="#small-dialog" class="w3_agileits_sign_up2 popup-with-zoom-anim ab scroll">Book Now</a>
+				</div>
+				<div class="col-md-3 package1">
+					<img src="images/package5.jpg" alt="package1" />
+					<h4>Japan Imperial Museum</h4>
+					<h5>210$</h5>
+					<a href="#small-dialog" class="w3_agileits_sign_up2 popup-with-zoom-anim ab scroll">Book Now</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //popular packages -->
+
+<!-- js -->
+<script type="text/javascript" src="{% static 'cp1/js/jquery-2.1.4.min.js' %}"></script>
+<script src="{% static 'cp1/js/jquery.range.js' %}"></script>
+<!-- //js -->
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["date"].value;
+    if (x == null || x.indexOf('月') === -1) {
+        alert("请选择出发日期。");
+        return false;
+    }
+	x = document.forms["myForm"]["time"].value;
+	if (x == null || x.indexOf('分') === -1) {
+        alert("请选择出发时间。");
+        return false;
+    }
+}
+</script>
+
+<!--选择时间和日期-->
+<script type="text/javascript" src = "{% static 'cp1/laydate/laydate.js' %}"></script>
+<script>
+	//执行一个laydate实例
+	laydate.render({ 
+  		elem: '#choose-timeS'
+		,type: 'time'
+  		,format: 'H时m分' //可任意组合
+	}); 
+	laydate.render({
+  		elem: '#choose-timeE'
+  		,type: 'time'
+  		,format: 'H时m分'
+	}); 
+</script>
+
+<script type="text/javascript">
+	// 百度地图API功能
+	function G(id) {
+		return document.getElementById(id);
+	}
+
+	var ac1 = new BMap.Autocomplete(    //建立一个自动完成的对象
+		{"input" : "suggestId1"
+	});
+	var ac2 = new BMap.Autocomplete(    //建立一个自动完成的对象
+		{"input" : "suggestId2"
+	});
+	function C(e) {  //鼠标放在下拉列表上的事件
+	var str = "";
+		var _value = e.fromitem.value;
+		var value = "";
+		if (e.fromitem.index > -1) {
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}    
+		str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+		
+		value = "";
+		if (e.toitem.index > -1) {
+			_value = e.toitem.value;
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}    
+		str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+		G("searchResultPanel").innerHTML = str;
+	}
+	ac1.addEventListener("onhighlight", C(e));
+	ac2.addEventListener("onhighlight", C(e));
+
+	var myValue;
+	ac1.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+	var _value = e.item.value;
+		myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		G("searchResultPanel1").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;	
+	});
+	ac2.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+	var _value = e.item.value;
+		myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		G("searchResultPanel2").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+	});
+</script>
+<!-- requried-jsfiles-for owl -->	<!-- testimonials -->
+	<script src="{% static 'cp1/js/owl.carousel.js' %}"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo2").owlCarousel({
+				items: 1,
+				lazyLoad: false,
+				autoPlay: true,
+				navigation: false,
+				navigationText: false,
+				pagination: true,
+			});
+		});
+	</script>
+<!-- //requried-jsfiles-for owl -->	<!-- //testimonials -->
+
+<!-- start-smoth-scrolling -->
+
+<script type="text/javascript" src="{% static 'cp1/js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{%static 'cp1/js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+<script>
+	$('.range-slider').jRange({
+ 		from: 0,
+    	to: 3000,
+    	step: 1,
+    	scale: [0,300,600,800,1200,1500,1800,2100,2400,2700,3000],
+    	format: '%s',
+    	width: 600,
+    	showLabels: true,
+    	isRange: true,
+		theme: 'theme-green2'
+	});
+</script>
+
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+
+<!-- Scrolling Nav JavaScript --> 
+    <script src="{% static 'cp1/js/scrolling-nav.js' %}"></script>  
+<!-- //fixed-scroll-nav-js --> 
+		
+<!-- for bootstrap working -->
+	<script src="{% static 'cp1/js/bootstrap.js' %}"></script>
+<!-- //for bootstrap working -->
+
+</body>
+</html>
